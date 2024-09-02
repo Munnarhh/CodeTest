@@ -2,7 +2,8 @@ package com.example.demo.logictest;
 
 public class Palindrome {
     public static boolean isPalindrome(int x) {
-        // Negative numbers and multiples of 10 (except zero) are not palindromes
+        // Negative numbers and multiples of 10 are not palindromes
+        //Zero is a palindrome
         if (x < 0 || (x % 10 == 0 && x != 0)) {
             return false;
         }
@@ -27,10 +28,11 @@ public class Palindrome {
     }
 
     public static void main(String[] args) {
-        // Example usage
+        // Example
         System.out.println(isPalindrome(121)); // Output: true
         System.out.println(isPalindrome(-121)); // Output: false
         System.out.println(isPalindrome(10)); // Output: false
         System.out.println(isPalindrome(12321)); // Output: true
+        System.out.println(isPalindrome(0)); // Output: true
     }
 }
